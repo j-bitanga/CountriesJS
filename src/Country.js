@@ -9,7 +9,7 @@ return (
         
         <p>
             {console.log(country)}
-                  {/* <b>{country.name.common}</b><br></br>
+                  <b>{country.name.common}</b><br></br>
                   Capital: {country.capital}<br></br>
                   Languages:
                   {Object.keys(country.languages).map((keyName, i) => (
@@ -21,7 +21,7 @@ return (
                   ))}
                   Flag:<br></br>
                   <img src={country.flags.png}/><br></br>
-                  <b>Weather in {country.name.common}</b> */}
+                  <b>Weather in {country.name.common}</b>
                     
 
 

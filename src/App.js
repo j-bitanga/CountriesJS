@@ -5,7 +5,7 @@ import List from './List'
 
 const App = () => {
 
-  const [countries, setCountries] = useState([])
+  const [allCountries, setAllCountries] = useState([])
   const [filteredCountries, setFilteredCountries] = useState('')
 
   useEffect (() => {
@@ -14,13 +14,13 @@ const App = () => {
     .get('https://restcountries.com/v3.1/all')
     .then(response => {
       console.log('promise fulfilled')
-      setCountries(response.data)
-      console.log(countries)
+      setAllCountries(response.data)
+      console.log(allCountries)
     })
   }, [])
   
   
-  const displayCountry = countries.filter(c => c.name.common.toLocaleLowerCase().includes(filteredCountries))
+  const displayCountry = allCountries.filter(c => c.name.common.toLocaleLowerCase().includes(filteredCountries))
 
   return (
     <div>
