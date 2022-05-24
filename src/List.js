@@ -3,6 +3,7 @@ import Country from './Country'
 
 const List = ({countries, setCountries}) =>  {
 
+  console.log('countries is', countries)
 
 if (countries.length > 10) {
   return (

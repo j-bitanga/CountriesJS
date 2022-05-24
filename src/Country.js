@@ -8,7 +8,7 @@ return (
     <div>
         
         <p>
-            {console.log(country)}
+            {/* {console.log(country)}
                   <b>{country.name.common}</b><br></br>
                   Capital: {country.capital}<br></br>
                   Languages:
@@ -21,7 +21,7 @@ return (
                   ))}
                   Flag:<br></br>
                   <img src={country.flags.png}/><br></br>
-                  <b>Weather in {country.name.common}</b>
+                  <b>Weather in {country.name.common}</b> */}
                     
 
 

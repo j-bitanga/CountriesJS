@@ -7,6 +7,7 @@ const App = () => {
 
   const [allCountries, setAllCountries] = useState([])
   const [filteredCountries, setFilteredCountries] = useState('')
+  const [countries, setCountries] = useState([])
 
   useEffect (() => {
     console.log('initial effect')
@@ -19,14 +20,14 @@ const App = () => {
     })
   }, [])
   
+  setAllCountries(allCountries.filter(c => c.name.common.toLocaleLowerCase().includes(filteredCountries)))
   
-  const displayCountry = allCountries.filter(c => c.name.common.toLocaleLowerCase().includes(filteredCountries))
 
   return (
     <div>
     <Filter setFilteredCountries={setFilteredCountries} filteredCountries={filteredCountries}/>
-    <List displayCountry={displayCountry}/>
-    {console.log(displayCountry)}
+    <List countries={allCountries} setCountries={setAllCountries}/>
+    {console.log(allCountries)}
     </div>
     
   )
